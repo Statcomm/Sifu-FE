@@ -1,24 +1,20 @@
+import { Fragment } from "react";
 import "./App.css";
-import NavBar from "./Components/NavBar";
-import CategoriesCards from "./Components/CategoriesCards";
-import { Route, Routes } from "react-router-dom";
-import RecipesCards from "./Components/RecipesCards";
-import CreateCat from "./Components/CreateCat";
-import CreateIng from "./Components/CreateIng";
-import CreateRecipe from "./Components/CreateRecipe";
+import NavBar from "./Components/NavBar/NavBar";
+import Profile from "./Components/Profile/Profile";
 
 function App() {
   return (
-    <div>
-      <h5>Home Page</h5>
+    <>
+      <div>
+        <h1>SIFU</h1>
+      </div>
 
       <NavBar />
-      <Routes>
-        <Route path="*" element={<CategoriesCards />} />
-        <Route path="/home" element={<CategoriesCards />} />
-        <Route path="/Profile" element={<RecipesCards />} />
-      </Routes>
-    </div>
+      <div>
+        <Profile />
+      </div>
+    </>
   );
 }
 
