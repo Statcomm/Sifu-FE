@@ -11,11 +11,11 @@ function NavBar() {
         <Container>
           <Navbar.Brand href="#home">
             <img
-              src="/logo.svg"
-              width="30"
-              height="30"
+              src="http://lifesifu.com/wp-content/uploads/2018/02/Logomakr_7YeZnA.png"
+              width="105"
+              height="46"
               className="d-inline-block align-top"
-              alt="React Bootstrap logo"
+              alt="Sifu Logo"
             />
           </Navbar.Brand>
         </Container>
