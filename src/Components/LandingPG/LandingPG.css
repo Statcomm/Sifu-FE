@@ -1,0 +1,27 @@
+.LandingPagePicture {
+  background-color: #8bd3df;
+  height: 350px;
+}
+
+.AboutUs {
+  background-color: beige;
+  height: 400px;
+  width: 700px;
+}
+.Buttons {
+}
+
+.MidPage {
+  display: flex;
+  background-color: antiquewhite;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.Signupin {
+  background-color: blueviolet;
+  height: 400px;
+  width: 700px;
+}
