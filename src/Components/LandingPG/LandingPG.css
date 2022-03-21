@@ -1,16 +1,56 @@
 .LandingPagePicture {
+  display: flex;
   background-color: #8bd3df;
-  height: 350px;
+  /* height: 350px; */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  justify-content: right;
+  align-items: center;
+  object-position: 20%;
+  background-color: #0194d0;
 }
 
 .AboutUs {
   background-color: beige;
   height: 400px;
   width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
-.Buttons {
+.TextTitle {
+  font-weight: 700;
+  font-size: 18px;
 }
-
+.ButtonsSegment {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 2%;
+  margin-left: 125px;
+  margin-right: 125px;
+}
+.ButtonsSegmentLogin {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  /* padding: 5%;
+  margin-right: 5%; */
+}
+.ButtonsThemselves {
+  background-color: #0a4fb8;
+  color: white;
+  border-radius: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  width: 180px;
+  height: 45px;
+}
 .MidPage {
   display: flex;
   background-color: antiquewhite;
@@ -21,7 +61,7 @@
 }
 
 .Signupin {
-  background-color: blueviolet;
+  background-color: beige;
   height: 400px;
   width: 700px;
 }

@@ -9,6 +9,12 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Andika&display=swap"
+        rel="stylesheet"
+      ></link>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
