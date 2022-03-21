@@ -98,7 +98,7 @@ function Profile() {
                                 <Accordion defaultActiveKey="0" flush>
                                   <Accordion.Item eventKey="0">
                                     <Accordion.Header>
-                                      Accordion Item #1
+                                      Proficiencies
                                     </Accordion.Header>
                                     <Accordion.Body>
                                       Lorem ipsum dolor sit amet, consectetur
