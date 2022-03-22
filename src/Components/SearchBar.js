@@ -67,9 +67,9 @@ const SearchBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {mentors.map((mentor) => {
+      {/* {mentors.map((mentor) => {
         return <div>{mentor.name}</div>;
-      })}
+      })} */}
     </div>
   );
 };

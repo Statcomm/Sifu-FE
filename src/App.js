@@ -12,7 +12,6 @@ import LandingPage from "./Components/LandingPG/LandingPage";
 function App() {
   return (
     <>
-<<<<<<< HEAD
       <div className="logo-text">
         <h1 className="logo-text">SIFU</h1>
       </div>
@@ -43,7 +42,6 @@ function App() {
       </div>
 
       <div></div>
-=======
       {/* <h1>SIFU</h1>
       </div>
       <NavBar />
@@ -58,7 +56,6 @@ function App() {
         <Route path="/LandingPage" />
         <Route path="/Profile" />
       </Routes>
->>>>>>> e83558b6b019fc6bc96188eb9589f91e513fad04
     </>
   );
 }
