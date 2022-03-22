@@ -184,3 +184,8 @@ Button:focus:not(:focus-visible) {
   display: flex !important;
   background-color: black;
 }
+
+.LandingPagePicture {
+  background-color: black;
+  color: black;
+}

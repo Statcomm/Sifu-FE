@@ -37,6 +37,7 @@ const SearchBar = () => {
                 className="me-2"
                 aria-label="Search"
               />
+
               <Button variant="outline-success">Search</Button>
               <Nav
                 className="me-auto my-2 my-lg-0"
@@ -66,6 +67,9 @@ const SearchBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      {mentors.map((mentor) => {
+        return <div>{mentor.name}</div>;
+      })}
     </div>
   );
 };
