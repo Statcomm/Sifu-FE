@@ -2,7 +2,9 @@ import { Fragment } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
-import Profile from "./Components/Profile/Profile";
+import { Route, Routes } from "react-router-dom";
+import UserForm from "./Components/SignUp/UserForm";
+import LandingPage from "./Components/LandingPG/LandingPage";
 
 function App() {
   return (
@@ -26,13 +28,17 @@ function App() {
             alt=""
           />
           English
-        </button>
+        </button>{" "}
+        <NavBar />
+        <LandingPage />
+        <Routes>
+          <Route path="*" />
+          <Route path="/LandingPage" />
+          <Route path="/Profile" />
+        </Routes>
       </div>
 
-      <NavBar />
-      <div>
-        <Profile />
-      </div>
+      <div></div>
     </>
   );
 }
