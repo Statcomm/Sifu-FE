@@ -6,6 +6,7 @@ function NavBar() {
     console.log(e.target.value);
   };
   return (
+
     <Navbar bg="dark">
       <Container>
         <Navbar.Brand href="#home">
@@ -19,6 +20,22 @@ function NavBar() {
         </Navbar.Brand>
       </Container>
     </Navbar>
+    
+    // <div>
+    //   <Navbar bg="dark">
+    //     <Container>
+    //       <Navbar.Brand href="#home">
+    //         <img
+    //           src="http://lifesifu.com/wp-content/uploads/2018/02/Logomakr_7YeZnA.png"
+    //           width="105"
+    //           height="46"
+    //           className="d-inline-block align-top"
+    //           alt="Sifu Logo"
+    //         />
+    //       </Navbar.Brand>
+    //     </Container>
+    //   </Navbar>
+    // </div>
   );
 }
 
