@@ -128,3 +128,17 @@
     bottom: -80px;
   }
 }
+
+.p-colz .p-cloz-icon i {
+  color: #59b256;
+  padding: 8px;
+  padding-left: 0px;
+}
+
+.p-colz .p-cloz-icon i:hover {
+  transform: scale(1.5);
+}
+
+.p-review-btn {
+  float: right;
+}

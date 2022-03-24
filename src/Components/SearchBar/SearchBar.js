@@ -10,7 +10,8 @@ import {
   Nav,
   NavDropdown,
 } from "react-bootstrap";
-import mentors from "../MentorsDummyData";
+import mentors from "../../MentorsDummyData.json";
+import "./SearchBar.css";
 
 const SearchBar = () => {
   // const [mentors, setMentors] = React.useState([]);
@@ -24,8 +25,8 @@ const SearchBar = () => {
   //   });
 
   return (
-    <div>
-      <Navbar bg="light" expand="lg">
+    <div className="bg">
+      <Navbar>
         <Container fluid>
           <Navbar.Brand href="#">My Profile</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

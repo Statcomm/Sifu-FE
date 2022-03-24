@@ -1,0 +1,15 @@
+.bg {
+  background: radial-gradient(
+    circle,
+    rgba(197, 134, 59, 1) 0%,
+    rgba(209, 144, 66, 1) 50%,
+    rgba(242, 179, 89, 1) 100%
+  );
+
+  /* background: radial-gradient(
+    circle,
+    rgba(203, 153, 101, 1) 0%,
+    rgba(179, 121, 75, 1) 50%,
+    rgba(156, 97, 55, 1) 100%
+  ); */
+}

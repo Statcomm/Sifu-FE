@@ -1,7 +1,7 @@
 import React from "react";
 import UserForm from "../SignUp/UserForm";
 import "./LandingPG.css";
-import LandingPic from "../../Media/LandingPic.png";
+import tree from "../../assets/Home/tree.png";
 import { Image } from "react-bootstrap";
 import { useState } from "react";
 import SignInForm from "../SignUp/SignInForm";
@@ -15,19 +15,21 @@ const LandingPage = () => {
 
   return (
     <div>
-      <div className="LandingPagePicture">
+      <div className="lp">
         <div>
-          <h1> A Sifu is a mentor.</h1>
+          <div className="primary-text">
+            <h1> A Sifu is a mentor.</h1>
+          </div>
+          <div className="highlighted-text">
+            <p>
+              A mentor nurtures their pupils into the peers they hope will one
+              day stand on their shoulders.
+            </p>
+          </div>
         </div>
-
-        <div>
-          <p>
-            A mentor nurtures their pupils into the peers they hope will one day
-            stand on their shoulders.
-          </p>
+        <div className="lp-picture">
+          <Image src={tree} className="lp-picture-background" />
         </div>
-
-        <Image src={LandingPic} />
       </div>
       <div className="MidPage">
         <div className="AboutUs">

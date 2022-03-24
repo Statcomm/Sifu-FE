@@ -1,9 +1,9 @@
-import { Fragment } from "react";
+import { Fragment, React } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Profile from "./Components/Profile/Profile";
-import SearchBar from "./Components/SearchBar";
+import SearchBar from "./Components/SearchBar/SearchBar";
 import mentors from "../src/MentorsDummyData.json";
 import { Route, Routes } from "react-router-dom";
 import UserForm from "./Components/SignUp/UserForm";
@@ -15,7 +15,7 @@ function App() {
       <div className="logo-text">
         <h1 className="logo-text">SIFU</h1>
       </div>
-      <div className="lang">
+      {/* <div className="lang">
         <button className="button-71">
           <img
             className="imgb"
@@ -31,31 +31,32 @@ function App() {
             alt=""
           />
           English
-        </button>{" "}
-        <NavBar />
-        <LandingPage />
-        <Routes>
-          <Route path="*" />
-          <Route path="/LandingPage" />
-          <Route path="/Profile" />
-        </Routes>
-      </div>
+        </button> */}
+      {/* <NavBar /> */}
 
-      <div></div>
+      <SearchBar />
+      {/* <LandingPage /> */}
+      <Routes>
+        <Route path="*" />
+        <Route path="/LandingPage" />
+        <Route path="/Profile" />
+      </Routes>
+      {/* </div> */}
+
       {/* <h1>SIFU</h1>
       </div>
       <NavBar />
-      <div>
-        <Profile /> */}
-      <SearchBar />
-      <NavBar />
+      <div> */}
+      <Profile />
+
+      {/* <NavBar />
 
       <LandingPage />
       <Routes>
         <Route path="*" />
         <Route path="/LandingPage" />
         <Route path="/Profile" />
-      </Routes>
+      </Routes>  */}
     </>
   );
 }

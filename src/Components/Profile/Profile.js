@@ -1,10 +1,12 @@
 import React from "react";
-import { Accordion, Card } from "react-bootstrap";
+import { Accordion, Button, Card } from "react-bootstrap";
 import "./Profile.css";
 import V from "../../Video/V.mp4";
 import Rating from "@mui/material/Rating";
+import ReviewModal from "../ReviewModal/ReviewModal";
 
 function Profile() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <>
       <div className="p">
@@ -14,7 +16,22 @@ function Profile() {
               <source src={V} type="video/mp4" />
             </video>
             <h2 className="p-intro">Zainab AlSairafi</h2>
-            <h1 className="p-name">@Zee</h1>
+            <h1 className="p-name">
+              @Zee
+              <div className="p-colz">
+                <div className="p-cloz-icon">
+                  <a href="http://api.whatsapp.com/send?phone=94433808">
+                    <i className="fa fa-whatsapp"></i>
+                  </a>
+                  <a href="https://www.instagram.com/f.alsaleh94/?hl=en">
+                    <i className="fa fa-instagram"></i>
+                  </a>
+                  <a href="https://twitter.com/FAlSaleh94">
+                    <i className="fa fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </h1>
             <div className="p-title">
               <div className="p-title-wrapper">
                 <div className="p-title-item">Crochet</div>
@@ -46,6 +63,15 @@ function Profile() {
                   </Card.Text>
                 </Card.Body>
               </Card>
+            </div>
+            <div className="p-review-btn">
+              <Button variant="primary" onClick={() => setModalShow(true)}>
+                Write a review
+              </Button>
+              <ReviewModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              />
             </div>
           </div>
         </div>
