@@ -6,8 +6,10 @@ import Profile from "./Components/Profile/Profile";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import mentors from "../src/MentorsDummyData.json";
 import { Route, Routes } from "react-router-dom";
-import UserForm from "./Components/SignUp/UserForm";
+import UserForm from "./Components/Signups-ins/SifuSignUp";
 import LandingPage from "./Components/LandingPG/LandingPage";
+import SifuSignUp from "./Components/Signups-ins/SifuSignUp";
+import SignInForm from "./Components/Signups-ins/SignInForm";
 
 function App() {
   return (
@@ -35,10 +37,12 @@ function App() {
       {/* <NavBar /> */}
 
       <SearchBar />
-      {/* <LandingPage /> */}
+      <LandingPage />
       <Routes>
         <Route path="*" />
-        <Route path="/LandingPage" />
+        <Route path="/LandingPage" element={<LandingPage />} />
+        <Route path="/sifus/signup" element={<SifuSignUp />} />
+        <Route path="/sifus/signin" element={<SignInForm />} />
         <Route path="/Profile" />
       </Routes>
       {/* </div> */}
@@ -47,7 +51,7 @@ function App() {
       </div>
       <NavBar />
       <div> */}
-      <Profile />
+      {/* <Profile /> */}
 
       {/* <NavBar />
 

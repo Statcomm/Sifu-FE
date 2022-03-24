@@ -5,17 +5,11 @@ import authstore from "../../stores/authStore";
 import { Modal, Form } from "react-bootstrap";
 import { BsPersonCircle } from "react-icons/bs";
 
-const UserForm = ({ userType }) => {
+const SignInForm = ({ userType }) => {
   const [user, setUser] = useState({
     username: "",
     password: "",
-    email: "",
-    userType: userType,
   });
-  console.log(
-    "🚀 ~ file: UserForm.js ~ line 9 ~ UserForm ~ userType",
-    userType
-  );
 
   const handleChange = (event) => {
     console.log(
@@ -28,7 +22,7 @@ const UserForm = ({ userType }) => {
     event.preventDefault();
     event.target.value === "signUp"
       ? authstore.signUp(user)
-      : authstore.logIn(user);
+      : authstore.SifulogIn(user);
   };
   const signout = () => {
     authstore.signOut(user);
@@ -47,28 +41,10 @@ const UserForm = ({ userType }) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> */}
-      <BsPersonCircle />{" "}
-      {userType == "sifu" ? "Become a Sifu" : "Become a Student"}
+      <BsPersonCircle /> User
       <Form onSubmit={handleSubmit}>
         {/* <Form.Label className="text"></Form.Label> */}
-        <Form.Control
-          className="box"
-          name="firstName"
-          value={user.firstName}
-          type="text"
-          onChange={handleChange}
-          placeholder="First Name"
-        />
-        <div>
-          <Form.Control
-            className="box"
-            name="lastName"
-            value={user.lastName}
-            type="text"
-            onChange={handleChange}
-            placeholder="Last Name"
-          />
-        </div>
+
         <div>
           <Form.Control
             className="box"
@@ -79,26 +55,7 @@ const UserForm = ({ userType }) => {
             placeholder="User Name"
           />
         </div>
-        <div>
-          <Form.Control
-            className="box"
-            name="phoneNumber"
-            value={user.phoneNumber}
-            type="Number"
-            onChange={handleChange}
-            placeholder="Phone Number"
-          />
-        </div>
-        <div>
-          <Form.Control
-            className="box"
-            name="email"
-            type="email"
-            value={user.email}
-            onChange={handleChange}
-            placeholder="Email"
-          />
-        </div>
+
         <div>
           <Form.Control
             className="box"
@@ -114,9 +71,6 @@ const UserForm = ({ userType }) => {
             <button value="login" onClick={handleSubmit} className="button">
               Sign In
             </button>
-            <button value="signUp" onClick={handleSubmit} className="button">
-              Sign Up
-            </button>
           </div>
         </Modal.Footer>
       </Form>
@@ -124,4 +78,4 @@ const UserForm = ({ userType }) => {
   );
 };
 
-export default observer(UserForm);
+export default observer(SignInForm);

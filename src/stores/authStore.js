@@ -25,9 +25,9 @@ class AuthStore {
       }
     }
   };
-  logIn = async (user) => {
+  SifulogIn = async (user) => {
     try {
-      const resp = await api.post("/login", user);
+      const resp = await api.post("sifus/signin", user);
       this.setUser(resp.data.token);
       console.log(
         "🚀 ~ file: authStore.js ~ line 32 ~ AuthStore ~ logIn= ~ resp.data.token",
@@ -43,7 +43,7 @@ class AuthStore {
 
   signUp = async (user) => {
     try {
-      const resp = await api.post("/signup", user);
+      const resp = await api.post("/sifus/signup", user);
       this.setUser(resp.data.token);
       console.log(
         "🚀 ~ file: authStore.js ~ line 42 ~ AuthStore ~ signUp= ~ resp.data.token",
