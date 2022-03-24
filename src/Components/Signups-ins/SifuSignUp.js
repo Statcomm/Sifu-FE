@@ -5,24 +5,31 @@ import authstore from "../../stores/authStore";
 import { Modal, Form } from "react-bootstrap";
 import { BsPersonCircle } from "react-icons/bs";
 
-const SignInForm = ({ userType }) => {
+const SifuForm = ({ userType }) => {
   const [user, setUser] = useState({
     username: "",
     password: "",
+    email: "",
+    usertype: userType,
   });
+  console.log(
+    "🚀 ~ file: SifuForm.js ~ line 9 ~ SifuForm ~ userType",
+    userType
+  );
 
   const handleChange = (event) => {
     console.log(
-      "🚀 ~ file: UserForm.js ~ line 20 ~ handleChange ~ event",
+      "🚀 ~ file: SifuForm.js ~ line 20 ~ handleChange ~ event",
       event
     );
     setUser({ ...user, [event.target.name]: event.target.value });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     event.target.value === "signUp"
       ? authstore.signUp(user)
-      : authstore.logIn(user);
+      : authstore.SifulogIn(user);
   };
   const signout = () => {
     authstore.signOut(user);
@@ -41,10 +48,28 @@ const SignInForm = ({ userType }) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> */}
-      <BsPersonCircle /> User
+      <BsPersonCircle />{" "}
+      {userType == "sifu" ? "Become a Sifu" : "Become a Student"}
       <Form onSubmit={handleSubmit}>
         {/* <Form.Label className="text"></Form.Label> */}
-
+        <Form.Control
+          className="box"
+          name="firstName"
+          value={user.firstName}
+          type="text"
+          onChange={handleChange}
+          placeholder="First Name"
+        />
+        <div>
+          <Form.Control
+            className="box"
+            name="lastName"
+            value={user.lastName}
+            type="text"
+            onChange={handleChange}
+            placeholder="Last Name"
+          />
+        </div>
         <div>
           <Form.Control
             className="box"
@@ -55,7 +80,26 @@ const SignInForm = ({ userType }) => {
             placeholder="User Name"
           />
         </div>
-
+        <div>
+          <Form.Control
+            className="box"
+            name="phoneNumber"
+            value={user.phoneNumber}
+            type="TEL"
+            onChange={handleChange}
+            placeholder="Phone Number"
+          />
+        </div>
+        <div>
+          <Form.Control
+            className="box"
+            name="email"
+            type="email"
+            value={user.email}
+            onChange={handleChange}
+            placeholder="Email"
+          />
+        </div>
         <div>
           <Form.Control
             className="box"
@@ -67,9 +111,9 @@ const SignInForm = ({ userType }) => {
           />
         </div>
         <Modal.Footer>
-          <div className="btn">
-            <button value="login" onClick={handleSubmit} className="button">
-              Sign In
+          <div>
+            <button value="signUp" onClick={handleSubmit} className="button">
+              Sign Up
             </button>
           </div>
         </Modal.Footer>
@@ -78,4 +122,4 @@ const SignInForm = ({ userType }) => {
   );
 };
 
-export default observer(SignInForm);
+export default observer(SifuForm);

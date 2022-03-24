@@ -1,10 +1,10 @@
 import React from "react";
-import UserForm from "../SignUp/UserForm";
 import "./LandingPG.css";
 import tree from "../../assets/Home/tree.png";
 import { Image } from "react-bootstrap";
 import { useState } from "react";
-import SignInForm from "../SignUp/SignInForm";
+import SignInForm from "../Signups-ins/SignInForm";
+import SifuSignUp from "../Signups-ins/SifuSignUp";
 
 const LandingPage = () => {
   const [show, setShow] = useState(false);
@@ -71,7 +71,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="Signupin">
-          {show ? <UserForm userType={userTypeText} /> : <SignInForm />}
+          {show ? <SifuSignUp userType={userTypeText} /> : <SignInForm />}
         </div>
       </div>
     </div>
